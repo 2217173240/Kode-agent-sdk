@@ -152,7 +152,7 @@ export interface Store {
  */
 
 interface BufferedWriter {
-  timer?: NodeJS.Timeout;
+  timer?: ReturnType<typeof setTimeout>;
   buffer: string[];
   flushing: string[];
   walWriting?: Promise<void>;
